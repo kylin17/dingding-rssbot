@@ -34,7 +34,7 @@ class RssRobot:
             for entry in feed.entries:
                 if entry.link not in post_url_list: # and self.is_today(entry):
                     card_list.append(CardItem(title=f'{entry.title}', url=entry.link,
-                                            pic_url='https://ftp.bmp.ovh/imgs/2020/07/6cdb9f606677c9e3.jpg'))
+                                            pic_url=entry.image))
                     rss_history_list.append(History(url=entry.link))
 
             if len(card_list) > 1:
