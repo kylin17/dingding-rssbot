@@ -13,6 +13,7 @@ jobs:
     - name: 'Checkout codes'
       uses: actions/checkout@v2
       with:
+        github_token: ${{ secrets.TOKEN }}
         ref: dev
     - name: Set up Python 3.7.6
       uses: actions/setup-python@v2
